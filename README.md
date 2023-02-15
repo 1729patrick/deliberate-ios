@@ -4,21 +4,24 @@ Questions that cover making apps easier to use for everyone.
 
 <details>
   <summary>How much experience do you have testing with VoiceOver?</summary>
-  <p style="margin-top: 6px">
+
+
+  <p>
     VoiceOver is a central part of Apple's accessibility system, to the point where if your app isn't accessible to VoiceOver it's probably not accessible to other accessibility systems in iOS. So, talk about your experience trying it out, how you make sure you've tested a UI thoroughly, any problems you've hit, and for bonus points mention the screen curtain!
+
   </p>
 </details>
 
 <details>
   <summary>How would you explain Dynamic Type to a new iOS developer?</summary>
-  <p style="margin-top: 6px">
+  <p>
     This is a sneaky question, because if you say “I don’t use it” or (worse) “I don’t know what it is”, it sort of means you don’t pay attention to accessibility or user preferences. Dynamic Type is a way of allowing the user to adjust their preferred size for all fonts in all apps, and it's surprisingly easy to use from both a developer and user perspective. SwiftUI even defaults to using it across the board!
   </p>
 </details>
 
 <details>
   <summary>What are the main problems we need to solve when making accessible apps?</summary>
-  <p style="margin-top: 6px">
+  <p>
    Try to give a range of answers: visual impairment, color blindness, touch problems, and audio problems are all good places to start, so give some specific examples of issues folks hit and how you solve them with Apple's accessibility tools.
 
 You should at the very least be able to talk about Dynamic Type confidently – why is it important, how does it adapt to user needs, and how do you use it in your apps?
@@ -27,7 +30,7 @@ You should at the very least be able to talk about Dynamic Type confidently – 
 
 <details>
   <summary>What accommodations have you added to apps to make them more accessible?</summary>
-  <p style="margin-top: 6px">
+  <p>
    Hopefully you can think of a few examples where you've added icons alongside colors to accommodate folks with color blindness, or where you've added support for the Reduce Motion option, and so on.
 
 This really is about being specific: which changes were easier or harder to make and why?
@@ -39,7 +42,7 @@ Questions dealing with data and data structures.
 
 <details>
   <summary>How is a dictionary different from an array?</summary>
-  <p style="margin-top: 6px">
+  <p>
    It’s all down to how you access data: arrays must be accessed using the index of each element, whereas dictionaries can be accessed using something you define – strings are very common. Make sure and give practical examples of where each would be used.
   </p>
 </details>
@@ -47,7 +50,7 @@ Questions dealing with data and data structures.
 <details>
   <summary>What are the main differences between classes and structs in Swift?
 </summary>
-  <p style="margin-top: 6px">
+  <p>
   Your answer ought to include a discussion of value types (like structs) and reference types (like classes), but also the fact that classes allow inheritance.
 
 For bonus points you could mention that classes have `deinit()` methods and structs do not.
@@ -56,14 +59,14 @@ For bonus points you could mention that classes have `deinit()` methods and stru
 
 <details>
   <summary>What are tuples and why are they useful?</summary>
-  <p style="margin-top: 6px">
+  <p>
   Tuples are a bit like anonymous structs, and are helpful for returning multiple values from a method in a type-safe way, among other things. Make sure you go on to provide some explanation of where they might be useful, such as returning two values from an array.
   </p>
 </details>
 
 <details>
   <summary>What does the Codable protocol do?</summary>
-  <p style="margin-top: 6px">
+  <p>
   This protocol was introduced in Swift 4 to let us quickly and safely convert custom Swift types to and from JSON, XML, and similar.
 
 For bonus points talk about customization points such as key and date decoding strategies, the `CodingKey` protocol, and more, so that you're able to show you can handle a range of input and output styles.
@@ -72,14 +75,14 @@ For bonus points talk about customization points such as key and date decoding s
 
 <details>
   <summary>What is the difference between an array and a set?</summary>
-  <p style="margin-top: 6px">
+  <p>
   This is a bit like computer science 101, so start by answering with the facts: sets can’t contain duplicates and are unordered, so lookup is significantly faster. Note: this might sound like a trivial question, but the "significantly faster" part is critical – sets can be thousands of times faster than arrays depending on how many elements they contain. If you can, go on to give specific examples of where a set would be a better idea than an array.
   </p>
 </details>
 
 <details>
   <summary>What is the difference between the Float, Double, and CGFloat data types?</summary>
-  <p style="margin-top: 6px">
+  <p>
 
 It’s a question of how many bits are used to store data: `Float` is always 32-bit, `Double` is always 64-bit, and `CGFloat` is either 32-bit or 64-bit depending on the device it runs on, but realistically it’s just 64-bit all the time.
 
@@ -89,7 +92,7 @@ For bonus points, talk about how Swift 5.5 and onwards allows us to use `CGFloat
 
 <details>
   <summary>What’s the importance of key decoding strategies when using Codable?</summary>
-  <p style="margin-top: 6px">
+  <p>
   
   Give a specific answer first – “key decoding strategies let us handle difference between JSON keys and property names in our `Decodable` struct” – then provide some kind of practical sample. For example, you might say that it’s common for JSON keys to use `snake_case` for key names, whereas in Swift we prefer `camelCase`, so we need to use a key decoding strategy to convert between the two.
   </p>
@@ -97,7 +100,7 @@ For bonus points, talk about how Swift 5.5 and onwards allows us to use `CGFloat
 
 <details>
   <summary>When using arrays, what’s the difference between map() and compactMap()?</summary>
-  <p style="margin-top: 6px">
+  <p>
 
   Remember to give practical examples as well as outlining the core differences. So, you might start by saying the `map()` transforms a sequence using a function we specify, whereas `compactMap()` does that same step but then unwraps its optionals and discards any nil values. For example, converting an array of strings into integers works better with `compactMap()`, because creating an `Int` from a `String` is failable.
   </p>
@@ -105,7 +108,7 @@ For bonus points, talk about how Swift 5.5 and onwards allows us to use `CGFloat
 
 <details>
   <summary>Why is immutability important?</summary>
-  <p style="margin-top: 6px">
+  <p>
 
   Immutability is baked deep into Swift, and Xcode even warns if `var` was used when `let` was possible. It’s important because it’s like a programming contract: we’re saying This Thing Should Not Change, so if we try to change it the compiler will refuse.
   </p>
@@ -113,7 +116,7 @@ For bonus points, talk about how Swift 5.5 and onwards allows us to use `CGFloat
 
 <details>
   <summary>What are one-sided ranges and when would you use them?</summary>
-  <p style="margin-top: 6px">
+  <p>
   As always, start with a simple definition that clarifies the difference between regular ranges, then provide a practical example.
 
 So, you might say that one-sided ranges are ranges where you don’t specify the start or end of the range, meaning that Swift will automatically make the range start from the start of the collection or the end of the collection. They are useful when you want to read from a certain position to the end of a collection, such as if you want to skip the first 10 users in an array.
@@ -122,7 +125,7 @@ So, you might say that one-sided ranges are ranges where you don’t specify the
 
 <details>
   <summary>What does it mean when we say “strings are collections in Swift”?</summary>
-  <p style="margin-top: 6px">
+  <p>
 
   This statement means that Swift’s `String` type conform to the `Collection` protocol, which allows us to loop over characters, count how long the string is, map the characters, select random characters, and more.
 
@@ -132,7 +135,7 @@ For bonus points, move on to talk about the `Collection` protocol itself – how
 
 <details>
   <summary>What is a UUID, and when might you use it?</summary>
-  <p style="margin-top: 6px">
+  <p>
   UUID stands for "universally unique identifier", which is a long string of hexadecimal numbers stored in a single type.
 
 UUIDs are helpful for ensuring some value is guaranteed to be unique, for example you might need a unique filename when saving something.
@@ -143,7 +146,7 @@ For bonus points, perhaps explain why we call them universally unique – if you
 
 <details>
   <summary>What's the difference between a value type and a reference type?</summary>
-  <p style="margin-top: 6px">
+  <p>
   The best way to frame this discussion is likely to be classes vs structs: an instance of a class can have multiple owners, but an instance of a struct cannot.
 
 For bonus points mention that closures are also reference types, and the implications of that.
@@ -152,7 +155,7 @@ For bonus points mention that closures are also reference types, and the implica
 
 <details>
   <summary>When would you use Swift’s Result type?</summary>
-  <p style="margin-top: 6px">
+  <p>
   Start with a brief introduction to what `Result` does, saying that it’s an enum encapsulating success and failure, both with associated values so you can attach extra information. I would then dive into the “when would you use it” part of the question – talking about asynchronous code is your best bet, particularly in comparison to how things like `URLSession` would often pass both a value and an error even when only one should exist at a time.
 
 If you’d like to go into more detail, more benefits of `Result` include being able to send the result of a function around as value to be handled at a later date, and also the ability to handle typed errors.
@@ -161,7 +164,7 @@ If you’d like to go into more detail, more benefits of `Result` include being 
 
 <details>
   <summary>What is type erasure and when would you use it?</summary>
-  <p style="margin-top: 6px">
+  <p>
 
   Type erasure allows us to throw away some type information, for example to say that an array of strings is actually just `AnySequence` – it’s a sequence containing strings, but we don’t know exactly what kind of sequence.
 
@@ -173,15 +176,75 @@ This is particularly useful when types are long and complex, which is often the 
 ## Design patterns
 Questions about design patterns, code architectures, and other programming approaches.
 
-  How would you explain delegates to a new Swift developer?
-  Can you explain MVC, and how it's used on Apple's platforms?
-  Can you explain MVVM, and how it might be used on Apple's platforms?
-  How would you explain dependency injection to a junior developer?
-  How would you explain protocol-oriented programming to a new Swift developer?
-  What experience do you have of functional programming?
-  Can you explain KVO, and how it's used on Apple's platforms?
-  Can you give some examples of where singletons might be a good idea?
-  What are phantom types and when would you use them?
+<details>
+  <summary>How would you explain delegates to a new Swift developer?</summary>
+  <p>
+
+Delegation allows you to have one object act in place of another, for example your view controller might act as the data source for a table. The delegate pattern is huge in iOS, so try to pick a small, specific example such as `UITableViewDelegate` from UIKit – something you can dissect from memory. 
+  </p>
+</details>
+<details>
+  <summary>Can you explain MVC, and how it's used on Apple's platforms?</summary>
+  <p>
+
+MVC is an approach that advocates separating data (model) from presentation (view), with the two parts being managed by separate logic (a controller). In theory this separation should be as clear as possible, but for bonus points you should talk about how view controllers sometimes get bloated as code gets merged together into one big blob. 
+  </p>
+</details>
+<details>
+  <summary>Can you explain MVVM, and how it might be used on Apple's platforms?</summary>
+  <p>
+
+Start with the simple definition of Model (your data), View (your layout), and View Model (a way to store the state of your application independently from your UI), but make sure you give some time over to the slightly more nebulous parts – where does networking code go, for example? This is also a good place to bring up the importance of bindings to avoid lots of boilerplate, and that probably leads to SwiftUI. 
+  </p>
+</details>
+<details>
+  <summary>How would you explain dependency injection to a junior developer?</summary>
+  <p>
+
+Dependency injection is the practice of creating an object and tell it what data it should work with, rather than letting that object query its environment to find that data for itself. Although this goes against the OOP principle of encapsulation, it’s worth talking about the advantages – it allows for mocking data when testing, for example. 
+  </p>
+</details>
+<details>
+  <summary>How would you explain protocol-oriented programming to a new Swift developer?</summary>
+  <p>
+
+ POP is a Swift buzzword, but don’t get carried away with the hype here: focus on why it’s different from OOP, and what benefits you think it has. You might want talk about horizontal vs vertical architectures here – larger codebases are likely to have sizable class hierarchies – but you could also talk about how POP is able to work with structs and enums as well as classes.
+  </p>
+</details>
+<details>
+  <summary>What experience do you have of functional programming?</summary>
+  <p>
+
+ The best answer of course is to provide detailed explanations of what you've used and where, but as you go make sure and talk about what functional programming means – functions must be first-class types, you place an emphasis on pure functions, and so on.
+
+If you’re not sure where to start, the easiest answer is to list some small specifics: if you’ve used `map()`, `compactMap()`, `flatMap()`, `reduce()`, `filter()` and so on, that’s a good place to begin.
+  </p>
+</details>
+<details>
+  <summary>Can you explain KVO, and how it's used on Apple's platforms?</summary>
+  <p>
+
+KVO used to be helpful in UIKit to watch for changes on values that don’t have useful delegates – you can literally say "tell me when this value changes." Try to give at least one specific example, such as watching the page load progress on a `WKWebView`. If you’re exclusively using SwiftUI chances are you’ll struggle here. 
+  </p>
+</details>
+<details>
+  <summary>Can you give some examples of where singletons might be a good idea?</summary>
+  <p>
+
+It’s very unlikely you’ll join a company where singletons are used extensively, so feel free to say that broadly speaking singletons aren’t great. Once you’ve given up that proviso, perhaps mention that Apple uses them extensively – thinks like `UIApplication`, for example, are designed to exist only once. Finally, try to give a fresh example of your own, such as creating an app-wide logger.
+
+For bonus points, perhaps compare and contrast SwiftUI’s environment. 
+  </p>
+</details>
+<details>
+  <summary>What are phantom types and when would you use them?</summary>
+  <p>
+
+ Phantom types are a type that doesn’t use at least one its generic parameters – they are declared with a generic parameter that isn’t used in their properties or methods.
+
+Even though we don’t use the generic type parameter, Swift does, which means it will treat two instances of our type as being incompatible if their generic type parameters are different. They aren’t used often, but when they are used they help the compiler enforce extra rules on our behalf – they make bad states impossible because the compiler will refuse to build our code.
+  </p>
+</details>
   
 
 ## Frameworks
