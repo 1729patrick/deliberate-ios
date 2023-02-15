@@ -1,23 +1,24 @@
+# iOS Interview Questions 
 ## Accessibility
 Questions that cover making apps easier to use for everyone.
 
 <details>
   <summary>How much experience do you have testing with VoiceOver?</summary>
-  <p>
+  <p style="margin-top: 6px">
     VoiceOver is a central part of Apple's accessibility system, to the point where if your app isn't accessible to VoiceOver it's probably not accessible to other accessibility systems in iOS. So, talk about your experience trying it out, how you make sure you've tested a UI thoroughly, any problems you've hit, and for bonus points mention the screen curtain!
   </p>
 </details>
 
 <details>
   <summary>How would you explain Dynamic Type to a new iOS developer?</summary>
-  <p>
+  <p style="margin-top: 6px">
     This is a sneaky question, because if you say “I don’t use it” or (worse) “I don’t know what it is”, it sort of means you don’t pay attention to accessibility or user preferences. Dynamic Type is a way of allowing the user to adjust their preferred size for all fonts in all apps, and it's surprisingly easy to use from both a developer and user perspective. SwiftUI even defaults to using it across the board!
   </p>
 </details>
 
 <details>
   <summary>What are the main problems we need to solve when making accessible apps?</summary>
-  <p>
+  <p style="margin-top: 6px">
    Try to give a range of answers: visual impairment, color blindness, touch problems, and audio problems are all good places to start, so give some specific examples of issues folks hit and how you solve them with Apple's accessibility tools.
 
 You should at the very least be able to talk about Dynamic Type confidently – why is it important, how does it adapt to user needs, and how do you use it in your apps?
@@ -26,7 +27,7 @@ You should at the very least be able to talk about Dynamic Type confidently – 
 
 <details>
   <summary>What accommodations have you added to apps to make them more accessible?</summary>
-  <p>
+  <p style="margin-top: 6px">
    Hopefully you can think of a few examples where you've added icons alongside colors to accommodate folks with color blindness, or where you've added support for the Reduce Motion option, and so on.
 
 This really is about being specific: which changes were easier or harder to make and why?
@@ -36,21 +37,84 @@ This really is about being specific: which changes were easier or harder to make
 ## Data
 Questions dealing with data and data structures.
 
-  How is a dictionary different from an array?
-  What are the main differences between classes and structs in Swift?
-  What are tuples and why are they useful?
-  What does the Codable protocol do?
-  What is the difference between an array and a set?
-  What is the difference between the Float, Double, and CGFloat data types?
-  What’s the importance of key decoding strategies when using Codable?
-  When using arrays, what’s the difference between map() and compactMap()?
-  Why is immutability important?
-  What are one-sided ranges and when would you use them?
-  What does it mean when we say “strings are collections in Swift”?
-  What is a UUID, and when might you use it?
-  What's the difference between a value type and a reference type?
-  When would you use Swift’s Result type?
-  What is type erasure and when would you use it?
+<details>
+  <summary>How is a dictionary different from an array?</summary>
+  <p style="margin-top: 6px">
+   It’s all down to how you access data: arrays must be accessed using the index of each element, whereas dictionaries can be accessed using something you define – strings are very common. Make sure and give practical examples of where each would be used.
+  </p>
+</details>
+
+<details>
+  <summary>What are the main differences between classes and structs in Swift?
+</summary>
+  <p style="margin-top: 6px">
+  Your answer ought to include a discussion of value types (like structs) and reference types (like classes), but also the fact that classes allow inheritance.
+
+For bonus points you could mention that classes have `deinit()` methods and structs do not.
+  </p>
+</details>
+
+<details>
+  <summary>What are tuples and why are they useful?</summary>
+  <p style="margin-top: 6px">
+  Tuples are a bit like anonymous structs, and are helpful for returning multiple values from a method in a type-safe way, among other things. Make sure you go on to provide some explanation of where they might be useful, such as returning two values from an array.
+  </p>
+</details>
+
+<details>
+  <summary>What does the Codable protocol do?</summary>
+  <p style="margin-top: 6px">
+  This protocol was introduced in Swift 4 to let us quickly and safely convert custom Swift types to and from JSON, XML, and similar.
+
+For bonus points talk about customization points such as key and date decoding strategies, the `CodingKey` protocol, and more, so that you're able to show you can handle a range of input and output styles.
+  </p>
+</details>
+
+<details>
+  <summary>What is the difference between an array and a set?</summary>
+  <p style="margin-top: 6px">
+  This is a bit like computer science 101, so start by answering with the facts: sets can’t contain duplicates and are unordered, so lookup is significantly faster. Note: this might sound like a trivial question, but the "significantly faster" part is critical – sets can be thousands of times faster than arrays depending on how many elements they contain. If you can, go on to give specific examples of where a set would be a better idea than an array.
+  </p>
+</details>
+
+<details>
+  <summary>What is the difference between the Float, Double, and CGFloat data types?</summary>
+  <p style="margin-top: 6px">
+
+It’s a question of how many bits are used to store data: `Float` is always 32-bit, `Double` is always 64-bit, and `CGFloat` is either 32-bit or 64-bit depending on the device it runs on, but realistically it’s just 64-bit all the time.
+
+For bonus points, talk about how Swift 5.5 and onwards allows us to use `CGFloat` and `Double` interchangeably.
+  </p>
+</details>
+
+<details>
+  <summary>What’s the importance of key decoding strategies when using Codable?</summary>
+  <p style="margin-top: 6px">
+  
+  Give a specific answer first – “key decoding strategies let us handle difference between JSON keys and property names in our `Decodable` struct” – then provide some kind of practical sample. For example, you might say that it’s common for JSON keys to use `snake_case` for key names, whereas in Swift we prefer `camelCase`, so we need to use a key decoding strategy to convert between the two.
+  </p>
+</details>
+
+<details>
+  <summary></summary>
+  <p style="margin-top: 6px">
+  
+  </p>
+</details>
+
+<details>
+  <summary></summary>
+  <p style="margin-top: 6px">
+  
+  </p>
+</details>
+
+<details>
+  <summary></summary>
+  <p style="margin-top: 6px">
+  
+  </p>
+</details>
 
 
 ## Design patterns
