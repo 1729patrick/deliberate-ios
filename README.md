@@ -72,6 +72,19 @@
   <p>
 
   ✅ Tuples are a bit like anonymous structs, and are helpful for returning multiple values from a method in a type-safe way, among other things. Make sure you go on to provide some explanation of where they might be useful, such as returning two values from an array.
+
+  ````
+  func split(name: String) -> (firstName: String, lastName: String) {
+    let split = name.components(separatedBy: " ")
+    return (split[0], split[1])
+}
+
+let parts = split(name: "Paul Hudson")
+parts.0
+parts.1
+parts.firstName
+parts.lastName
+````
   </p>
 </details>
 <details>
@@ -118,6 +131,16 @@
   <p>
 
   ✅ Immutability is baked deep into Swift, and Xcode even warns if `var` was used when `let` was possible. It’s important because it’s like a programming contract: we’re saying This Thing Should Not Change, so if we try to change it the compiler will refuse.
+
+  It provides several benefits that make code more reliable, safe, and easier to reason about.
+
+- Thread-safety: Immutable objects are thread-safe because they cannot be modified after they are created. This makes them ideal for use in multi-threaded applications where multiple threads may access the same object simultaneously.
+- Predictability: Immutability makes code more predictable because it eliminates the possibility of unexpected changes to objects. This makes it easier to reason about the behavior of code, and to identify and fix bugs.
+- Reusability: Immutable objects can be reused in multiple contexts because they have a fixed state that is not affected by external factors. This makes them more flexible and versatile than mutable objects, which may have unpredictable behavior.
+- Performance: Immutable objects can be more performant than mutable objects in certain situations. For example, they can be cached more easily because they always have the same state, and they can be shared across multiple threads without the need for synchronization.
+- Debugging: Immutability makes debugging easier because it eliminates the possibility of unexpected changes to objects. This makes it easier to identify the source of bugs and to fix them.
+
+- In summary, immutability provides several benefits that make code more reliable, safe, and easier to reason about. It is an important concept in multi-threaded and concurrent programming environments
   </p>
 </details>
 <details>
