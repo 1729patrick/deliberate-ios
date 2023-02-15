@@ -55,16 +55,16 @@
   </p>
 </details>
 <details>
-  <summary> 🤔 What are the main differences between stack and structs in heap?</summary>
+  <summary> 🤔 What are the main differences between Stack and structs in Heap?</summary>
   <p>
 
-  ✅ Ythe stack and the heap are both used to allocate and manage memory, but they differ in how they do so and what types of data they can store.
+  ✅ The `Stack` and the `Heap` are both used to allocate and manage memory, but they differ in how they do so and what types of data they can store.
 
-  The stack is a region of memory that is used for storing local variables and function call frames. When a function is called, its local variables are allocated on the stack, and when the function returns, the stack memory is automatically deallocated. The stack is typically faster and more efficient than the heap because it is managed by the CPU, and memory access is very fast.
+  The `Stack` is a region of memory that is used for storing local variables and function call frames. When a function is called, its local variables are allocated on the `Stack`, and when the function returns, the `Stack` memory is automatically deallocated. The `Stack` is typically faster and more efficient than the `Heap` because it is managed by the CPU, and memory access is very fast.
 
-  On the other hand, the heap is a region of memory that is used for dynamic memory allocation, such as objects or arrays that are created at runtime. The heap is managed by the developer and requires manual memory allocation and deallocation. The heap is typically slower than the stack because it involves the use of system calls to allocate and deallocate memory.
+  On the other hand, the `Heap` is a region of memory that is used for dynamic memory allocation, such as objects or arrays that are created at runtime. The `Heap` is managed by the developer and requires manual memory allocation and deallocation. The `Heap` is typically slower than the stack because it involves the use of system calls to allocate and deallocate memory.
 
-  In Swift, variables of value types, such as integers, floats, and structs, are typically allocated on the stack, while variables of reference types, such as classes and closures, are allocated on the heap. However, Swift uses automatic reference counting (ARC) to manage the memory of objects on the heap, making memory management much easier and safer for developers. In short, the stack is used for short-term memory allocation, while the heap is used for long-term memory allocation.
+  Variables of value types, such as `integers`, `floats`, and `structs`, are typically allocated on the `Stack`, while variables of reference types, such as `classes` and `closures`, are allocated on the `Heap`. However, Swift uses automatic reference counting (ARC) to manage the memory of objects on the `Heap`, making memory management much easier and safer for developers. The `Stack` is used for short-term memory allocation, while the `Heap` is used for long-term memory allocation.
   </p>
 </details>
 <details>
