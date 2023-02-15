@@ -46,8 +46,7 @@
   </p>
 </details>
 <details>
-  <summary> 🤔 What are the main differences between classes and structs in Swift?
-</summary>
+  <summary> 🤔 What are the main differences between classes and structs in Swift?</summary>
   <p>
 
   ✅ Your answer ought to include a discussion of value types (like structs) and reference types (like classes), but also the fact that classes allow inheritance.
@@ -56,8 +55,7 @@
   </p>
 </details>
 <details>
-  <summary> 🤔 What are the main differences between stack and structs in heap?
-</summary>
+  <summary> 🤔 What are the main differences between stack and structs in heap?</summary>
   <p>
 
   ✅ Ythe stack and the heap are both used to allocate and manage memory, but they differ in how they do so and what types of data they can store.
@@ -353,8 +351,7 @@ For bonus points mention that closures are also reference types, and the implica
   </p>
 </details>
 <details>
-  <summary> 🤔 How much experience do you have using StoreKit? Can you give examples?
-</summary>
+  <summary> 🤔 How much experience do you have using StoreKit? Can you give examples?</summary>
   <p>
 
   ✅ Most apps use only a small slice of StoreKit, whether it's unlocking in-app purchases, displaying other apps to purchase, or asking users to review the app. Either way, have something to talk about – it's better to say you've at least tried one of its features than have nothing at all to show.
@@ -436,8 +433,7 @@ For bonus points mention that closures are also reference types, and the implica
   </p>
 </details>
 <details>
-  <summary> 🤔 How would you add a shadow to one of your views?
-</summary>
+  <summary> 🤔 How would you add a shadow to one of your views?</summary>
   <p>
 
   ✅ In UIKit, all view layers have options for shadow opacity, radius, offset, color, and path. In SwiftUI, you can use the `shadow()` modifier. This would be a good time to mention to relative cost of dynamic shadows and how rasterizing layers in UIKit helps.
@@ -593,8 +589,7 @@ For bonus points mention that closures are also reference types, and the implica
   </p>
 </details>
 <details>
-  <summary> 🤔 How do you think Swift compares to Objective-C?
-</summary>
+  <summary> 🤔 How do you think Swift compares to Objective-C?</summary>
   <p>
 
   ✅ Swift is a much more modern programming language, so it has a lot going for it. You might want to mention optionality, tuples, value types, `Codable`, generics, among other things. However, don't get sucked into the trap of assuming the traffic is all one way: Objective-C has C and C++ compatibility, and compiles significantly faster.
