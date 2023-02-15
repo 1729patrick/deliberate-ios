@@ -55,6 +55,15 @@
   </p>
 </details>
 <details>
+  <summary> 🤔 What's the difference between a value type and a reference type?</summary>
+  <p>
+
+  ✅ The best way to frame this discussion is likely to be classes vs structs: an instance of a class can have multiple owners, but an instance of a struct cannot.
+
+For bonus points mention that closures are also reference types, and the implications of that.
+  </p>
+</details>
+<details>
   <summary> 🤔 What are the main differences between Stack and structs in Heap?</summary>
   <p>
 
@@ -172,7 +181,11 @@ Immutability provides several benefits that make code more reliable, safe, and e
   <summary> 🤔 What is a collection protocol and how to work with it?</summary>
   <p>
 
-  ✅ The Collection protocol defines a set of requirements for types that represent a collection of values, such as arrays, sets, and dictionaries. It provides a common interface for working with collections and allows for a standardized way of accessing and manipulating collection data. To work with the Collection protocol, you can create your own types that conform to the protocol or use the built-in types that conform to it. This protocol provides useful methods like getting the number of elements, accessing elements by index, iterating over elements, and checking if the collection is empty.
+  ✅ The Collection protocol defines a set of requirements for types that represent a collection of values, such as arrays, sets, and dictionaries. It provides a common interface for working with collections and allows for a standardized way of accessing and manipulating collection data.
+  
+  To work with the Collection protocol, you can create your own types that conform to the protocol or use the built-in types that conform to it.
+  
+  This protocol provides useful methods like getting the number of elements, accessing elements by index, iterating over elements, and checking if the collection is empty.
   </p>
 </details>
 
@@ -185,15 +198,6 @@ Immutability provides several benefits that make code more reliable, safe, and e
   UUIDs are helpful for ensuring some value is guaranteed to be unique, for example you might need a unique filename when saving something.
 
   For bonus points, perhaps explain why we call them universally unique – if you created 100 trillion UUIDs there's a one in a billion chance of generating a duplicate.
-  </p>
-</details>
-<details>
-  <summary> 🤔 What's the difference between a value type and a reference type?</summary>
-  <p>
-
-  ✅ The best way to frame this discussion is likely to be classes vs structs: an instance of a class can have multiple owners, but an instance of a struct cannot.
-
-For bonus points mention that closures are also reference types, and the implications of that.
   </p>
 </details>
 <details>
