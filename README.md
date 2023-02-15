@@ -52,7 +52,21 @@
 
   ✅ Your answer ought to include a discussion of value types (like structs) and reference types (like classes), but also the fact that classes allow inheritance.
 
-  For bonus points you could mention that classes have `deinit()` methods and structs do not.
+  For bonus points you could mention that classes have `deinit()` methods and structs do not and that value types are stored in the `Stack` and reference types are stored in the `Heap`.
+  </p>
+</details>
+<details>
+  <summary> 🤔 What are the main differences between stack and structs in heap?
+</summary>
+  <p>
+
+  ✅ Ythe stack and the heap are both used to allocate and manage memory, but they differ in how they do so and what types of data they can store.
+
+  The stack is a region of memory that is used for storing local variables and function call frames. When a function is called, its local variables are allocated on the stack, and when the function returns, the stack memory is automatically deallocated. The stack is typically faster and more efficient than the heap because it is managed by the CPU, and memory access is very fast.
+
+  On the other hand, the heap is a region of memory that is used for dynamic memory allocation, such as objects or arrays that are created at runtime. The heap is managed by the developer and requires manual memory allocation and deallocation. The heap is typically slower than the stack because it involves the use of system calls to allocate and deallocate memory.
+
+  In Swift, variables of value types, such as integers, floats, and structs, are typically allocated on the stack, while variables of reference types, such as classes and closures, are allocated on the heap. However, Swift uses automatic reference counting (ARC) to manage the memory of objects on the heap, making memory management much easier and safer for developers. In short, the stack is used for short-term memory allocation, while the heap is used for long-term memory allocation.
   </p>
 </details>
 <details>
