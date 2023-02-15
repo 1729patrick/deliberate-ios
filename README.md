@@ -169,6 +169,14 @@ Immutability provides several benefits that make code more reliable, safe, and e
   </p>
 </details>
 <details>
+  <summary> 🤔 What is a collection protocol and how to work with it?</summary>
+  <p>
+
+  ✅ The Collection protocol defines a set of requirements for types that represent a collection of values, such as arrays, sets, and dictionaries. It provides a common interface for working with collections and allows for a standardized way of accessing and manipulating collection data. To work with the Collection protocol, you can create your own types that conform to the protocol or use the built-in types that conform to it. This protocol provides useful methods like getting the number of elements, accessing elements by index, iterating over elements, and checking if the collection is empty.
+  </p>
+</details>
+
+<details>
   <summary> 🤔 What is a UUID, and when might you use it?</summary>
   <p>
 
