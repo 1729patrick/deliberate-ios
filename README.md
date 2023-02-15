@@ -96,23 +96,76 @@ For bonus points, talk about how Swift 5.5 and onwards allows us to use `CGFloat
 </details>
 
 <details>
-  <summary></summary>
+  <summary>When using arrays, what’s the difference between map() and compactMap()?</summary>
   <p style="margin-top: 6px">
-  
+
+  Remember to give practical examples as well as outlining the core differences. So, you might start by saying the `map()` transforms a sequence using a function we specify, whereas `compactMap()` does that same step but then unwraps its optionals and discards any nil values. For example, converting an array of strings into integers works better with `compactMap()`, because creating an `Int` from a `String` is failable.
   </p>
 </details>
 
 <details>
-  <summary></summary>
+  <summary>Why is immutability important?</summary>
   <p style="margin-top: 6px">
-  
+
+  Immutability is baked deep into Swift, and Xcode even warns if `var` was used when `let` was possible. It’s important because it’s like a programming contract: we’re saying This Thing Should Not Change, so if we try to change it the compiler will refuse.
   </p>
 </details>
 
 <details>
-  <summary></summary>
+  <summary>What are one-sided ranges and when would you use them?</summary>
   <p style="margin-top: 6px">
-  
+  As always, start with a simple definition that clarifies the difference between regular ranges, then provide a practical example.
+
+So, you might say that one-sided ranges are ranges where you don’t specify the start or end of the range, meaning that Swift will automatically make the range start from the start of the collection or the end of the collection. They are useful when you want to read from a certain position to the end of a collection, such as if you want to skip the first 10 users in an array.
+  </p>
+</details>
+
+<details>
+  <summary>What does it mean when we say “strings are collections in Swift”?</summary>
+  <p style="margin-top: 6px">
+
+  This statement means that Swift’s `String` type conform to the `Collection` protocol, which allows us to loop over characters, count how long the string is, map the characters, select random characters, and more.
+
+For bonus points, move on to talk about the `Collection` protocol itself – how it means we have a consistent way to work with strings, arrays, sets, and more.
+  </p>
+</details>
+
+<details>
+  <summary>What is a UUID, and when might you use it?</summary>
+  <p style="margin-top: 6px">
+  UUID stands for "universally unique identifier", which is a long string of hexadecimal numbers stored in a single type.
+
+UUIDs are helpful for ensuring some value is guaranteed to be unique, for example you might need a unique filename when saving something.
+
+For bonus points, perhaps explain why we call them universally unique – if you created 100 trillion UUIDs there's a one in a billion chance of generating a duplicate.
+  </p>
+</details>
+
+<details>
+  <summary>What's the difference between a value type and a reference type?</summary>
+  <p style="margin-top: 6px">
+  The best way to frame this discussion is likely to be classes vs structs: an instance of a class can have multiple owners, but an instance of a struct cannot.
+
+For bonus points mention that closures are also reference types, and the implications of that.
+  </p>
+</details>
+
+<details>
+  <summary>When would you use Swift’s Result type?</summary>
+  <p style="margin-top: 6px">
+  Start with a brief introduction to what `Result` does, saying that it’s an enum encapsulating success and failure, both with associated values so you can attach extra information. I would then dive into the “when would you use it” part of the question – talking about asynchronous code is your best bet, particularly in comparison to how things like `URLSession` would often pass both a value and an error even when only one should exist at a time.
+
+If you’d like to go into more detail, more benefits of `Result` include being able to send the result of a function around as value to be handled at a later date, and also the ability to handle typed errors.
+  </p>
+</details>
+
+<details>
+  <summary>What is type erasure and when would you use it?</summary>
+  <p style="margin-top: 6px">
+
+  Type erasure allows us to throw away some type information, for example to say that an array of strings is actually just `AnySequence` – it’s a sequence containing strings, but we don’t know exactly what kind of sequence.
+
+This is particularly useful when types are long and complex, which is often the case with Combine. So, rather than having a return type that is 500 characters long, we can just say `AnyPublisher<SomeType, Never>` – it’s a publisher that will provide `SomeType` and never throw an error, but we don’t care exactly what publisher it is.
   </p>
 </details>
 
