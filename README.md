@@ -623,13 +623,6 @@ For bonus points mention that closures are also reference types, and the implica
 ###### Questions about improving your apps to be faster, more efficient, less crashy, and similar.
 
 <details>
-  <summary> 🤔 What experience do you have working on macOS, tvOS, and watchOS?</summary>
-  <p>
-
-  ✅ Keep in mind that many company have significant investments in Apple computers – being able to make macOS apps for internal use can be a real boost. I would also suggest that saying you've dabbled in something like watchOS demonstrates curiosity and an ability innovate. If you’ve moved apps to the Mac using something like Catalyst that’s also worth discussing here, particularly if you’re able to compare it to SwiftUI.
-  </p>
-</details>
-<details>
   <summary> 🤔 How would you identify and resolve a retain cycle?</summary>
   <p>
 
