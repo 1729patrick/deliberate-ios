@@ -140,7 +140,7 @@ parts.lastName
 - Performance: Immutable objects can be more performant than mutable objects in certain situations. For example, they can be cached more easily because they always have the same state, and they can be shared across multiple threads without the need for synchronization.
 - Debugging: Immutability makes debugging easier because it eliminates the possibility of unexpected changes to objects. This makes it easier to identify the source of bugs and to fix them.
 
-- In summary, immutability provides several benefits that make code more reliable, safe, and easier to reason about. It is an important concept in multi-threaded and concurrent programming environments
+Immutability provides several benefits that make code more reliable, safe, and easier to reason about. It is an important concept in multi-threaded and concurrent programming environments
   </p>
 </details>
 <details>
@@ -150,6 +150,13 @@ parts.lastName
   ✅ As always, start with a simple definition that clarifies the difference between regular ranges, then provide a practical example.
 
   So, you might say that one-sided ranges are ranges where you don’t specify the start or end of the range, meaning that Swift will automatically make the range start from the start of the collection or the end of the collection. They are useful when you want to read from a certain position to the end of a collection, such as if you want to skip the first 10 users in an array.
+
+  ````
+  let characters = ["Dr Horrible", "Captain Hammer", "Penny", "Bad Horse", "Moist"]
+
+  let bigParts = characters[..<3] //["Dr Horrible", "Captain Hammer", "Penny"]
+  let smallParts = characters[3...] //["Bad Horse", "Moist"]
+````
   </p>
 </details>
 <details>
