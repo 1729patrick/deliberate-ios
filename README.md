@@ -311,7 +311,7 @@ Immutability provides several benefits that make code more reliable, safe, and e
   </p>
 </details>
 <details>
-  <summary> 🤔 How can you explain Metal?</summary>
+  <summary> 🤔  What is the purpose of Metal?</summary>
   <p>
 
   ✅ Metal is a low-level graphics API provided by Apple that allows developers to access the power of the GPU in iOS, macOS, and tvOS devices. It provides fine-grained control over the GPU, enabling developers to create high-performance, visually rich applications with complex 2D and 3D graphics and visual effects.
@@ -971,6 +971,17 @@ If you want to really show off your knowledge, perhaps mention that you can use 
   For instance, you might describe a weather enum that lists sunny, windy, and rainy as cases, but has an associated value for cloudy so that you can store the cloud coverage. Or you might describe types of houses, with the number of bedrooms being an associated integer.
 
   It doesn't really matter what example you choose, because the point is to show you understand why they are useful outside of a textbook!
+
+  ````
+enum Activity {
+  case bored
+  case running(destination: String)
+  case talking(topic: String)
+  case singing(volume: Int)
+}
+
+let talking = Activity.talking(topic: "football")
+````
   </p>
 </details>
 <details>
