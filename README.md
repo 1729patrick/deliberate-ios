@@ -1088,6 +1088,21 @@ print("Haters", "gonna", "hate")
   ✅ Start with the simplest explanation then you can, then try to follow up with practical examples.
 
   For example, you might start by saying that key paths let us refer to a property in a type rather than the exact value of that property in one particular instance. You could then follow up with examples such as using the `map()` method with a key path, to convert an array of users into an array of strings containing just their names, or perhaps using `filter()` to filter an array based on which items have a Boolean property set to true.
+
+  ````
+struct Starship {
+  var name: String
+  var maxWarp: Double
+}
+
+let voyager = Starship(name: "Voyager", maxWarp: 9.975)
+
+let nameKeyPath = \Starship.name
+let warpKeyPath = \Starship.maxWarp
+
+print(voyager[keyPath: nameKeyPath])
+print(voyager[keyPath: warpKeyPath])
+```
   </p>
 </details>
 <details>
