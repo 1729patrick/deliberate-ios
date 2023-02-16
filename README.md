@@ -1186,6 +1186,14 @@ print(joined)
   <p>
 
   ✅ Almost every Swift developer uses `self` regularly, but the question here requires to distinguish between that and the capitalized version. Start with `self`, which refers to the current object your code is running inside, then move on to `Self`, which refers to the current type your code is running inside. You can remember this by looking at the capital letter: we name our types using a capital first letter, so `Self` refers to a type.
+
+  ````
+  extension BinaryInteger {
+    func squared() -> Self {
+        return self * self
+    }
+  }
+````
   </p>
 </details>
 <details>
