@@ -1136,6 +1136,23 @@ public var body: some View {
   ✅ This is an advanced question, so take your time. Start with a basic definition: result builders allow us to create a new value step by step by passing in a sequence of our choosing.
 
   Next, follow up with a specific example – I’d suggest that SwiftUI is the easiest one here, because when we have a `VStack` with a variety of views inside Swift silently groups them together into an internal `TupleView` type so that they can be stored as a single child of the `VStack` – it turns a sequence of views into a single view.
+
+  ````
+@resultBuilder
+struct SimpleStringBuilder {
+    static func buildBlock(_ parts: String...) -> String {
+        parts.joined(separator: "\n")
+    }
+}
+
+let joined = SimpleStringBuilder.buildBlock(
+    "Why settle for a Duke",
+    "when you can have",
+    "a Prince?"
+)
+
+print(joined)
+````
   </p>
 </details>
 <details>
