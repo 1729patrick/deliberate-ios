@@ -423,7 +423,17 @@ Immutability provides several benefits that make code more reliable, safe, and e
   <summary> 🤔 How much experience do you have with GCD?</summary>
   <p>
 
-  ✅ Most developers have used Grand Central Dispatch at some point, either explicitly or implicitly – here the interviewer is probably trying to figure out which it is. You can approach this directly using `DispatchQueue` if you want, but you might also want to consider `OperationQueue`.
+  ✅ Most developers have used `Grand Central Dispatch` at some point, either explicitly or implicitly – here the interviewer is probably trying to figure out which it is. You can approach this directly using `DispatchQueue` if you want, but you might also want to consider `OperationQueue`.
+
+  GCD is a powerful framework that provides a simple and efficient way to manage tasks in iOS app development. Its use can improve the performance and responsiveness of apps, especially in cases where tasks may take a long time to complete or require significant processing power.
+
+  Some common uses of GCD in iOS app development include:
+
+  Background processing: GCD can be used to perform long-running tasks in the background, without blocking the main thread or user interface. This can improve the perceived performance of the app and prevent the app from becoming unresponsive.
+  Network and data processing: GCD can be used to download and process data from a network, such as images or audio files, without blocking the main thread. This can improve the speed and responsiveness of the app.
+  Animations: GCD can be used to perform animations and other visual effects, without blocking the main thread or causing the app to become unresponsive.
+  Parallel processing: GCD can be used to perform multiple tasks in parallel, which can improve the performance of the app and reduce the overall processing time.
+  Overall, GCD is a powerful framework that provides a simple and efficient way to manage tasks in iOS app development. Its use can improve the performance and responsiveness of apps, especially in cases where tasks may take a long time to complete or require significant processing power.
   </p>
 </details>
 <details>
