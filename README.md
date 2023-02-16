@@ -1030,6 +1030,19 @@ let talking = Activity.talking(topic: "football")
   ✅ Variadic functions accept any number of parameters. Swift writes them using `...`, and we’re handed the parameters as an array. Again, try to give an example – something like `print()` is a good place to start.
 
   For bonus points, you could add that Swift 5.4 and later allow multiple variadic parameters.
+
+
+  ````
+func square(numbers: Int...) {
+  for number in numbers {
+      print("\(number) squared is \(number * number)")
+  }
+}
+
+square(numbers: 1, 2, 3, 4, 5)
+
+print("Haters", "gonna", "hate")
+  ````
   </p>
 </details>
 <details>
