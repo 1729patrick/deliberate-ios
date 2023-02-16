@@ -1160,6 +1160,25 @@ print(joined)
   <p>
 
   ✅ Get straight to the point and say it allows us to compile one set of code for the simulator, and another set of code for physical devices. Make sure and follow up with a practical example, such as a game that uses Core Motion to handle tilting movement on a real device, whereas on the simulator you need to tap the screen to simulate motion.
+  ````
+  func takePhoto() {
+    #if targetEnvironment(simulator)
+        // we're building for the simulator; use the sample photo
+        if let img = UIImage(named: "sample") {
+          processPhoto(img)
+        } else {
+          fatalError("Sample image failed to load")
+        }
+    #else
+        // we're building for a real device; take an actual photo
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        vc.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true)
+    #endif
+  }
+````
   </p>
 </details>
 <details>
