@@ -1089,7 +1089,7 @@ print("Haters", "gonna", "hate")
 
   For example, you might start by saying that key paths let us refer to a property in a type rather than the exact value of that property in one particular instance. You could then follow up with examples such as using the `map()` method with a key path, to convert an array of users into an array of strings containing just their names, or perhaps using `filter()` to filter an array based on which items have a Boolean property set to true.
 
-  ````
+````
 struct Starship {
   var name: String
   var maxWarp: Double
@@ -1102,7 +1102,7 @@ let warpKeyPath = \Starship.maxWarp
 
 print(voyager[keyPath: nameKeyPath])
 print(voyager[keyPath: warpKeyPath])
-```
+````
   </p>
 </details>
 <details>
@@ -1121,6 +1121,12 @@ print(voyager[keyPath: warpKeyPath])
   It’s important that you try to explain the difference between an opaque return type and returning a protocol, because in the latter your returned value can be absolutely anything whereas in the former the compiler knows what data was actually returned even if you don’t get access to that.
 
   For bonus points, talk about how SwiftUI uses `@ViewBuilder` to silently allow us to return different view types from a view body.
+
+````
+public var body: some View {
+ Text("Opaque type 👆🏻")
+}
+````
   </p>
 </details>
 <details>
