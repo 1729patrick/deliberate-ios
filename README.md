@@ -86,14 +86,14 @@ For bonus points mention that closures are also reference types, and the implica
   func split(name: String) -> (firstName: String, lastName: String) {
     let split = name.components(separatedBy: " ")
     return (split[0], split[1])
-}
+  }
 
-let parts = split(name: "Paul Hudson")
-parts.0
-parts.1
-parts.firstName
-parts.lastName
-````
+  let parts = split(name: "Paul Hudson")
+  parts.0
+  parts.1
+  parts.firstName
+  parts.lastName
+  ````
   </p>
 </details>
 <details>
@@ -165,7 +165,7 @@ Immutability provides several benefits that make code more reliable, safe, and e
 
   let bigParts = characters[..<3] //["Dr Horrible", "Captain Hammer", "Penny"]
   let smallParts = characters[3...] //["Bad Horse", "Moist"]
-````
+  ````
   </p>
 </details>
 <details>
@@ -973,15 +973,15 @@ If you want to really show off your knowledge, perhaps mention that you can use 
   It doesn't really matter what example you choose, because the point is to show you understand why they are useful outside of a textbook!
 
   ````
-enum Activity {
-  case bored
-  case running(destination: String)
-  case talking(topic: String)
-  case singing(volume: Int)
-}
+  enum Activity {
+    case bored
+    case running(destination: String)
+    case talking(topic: String)
+    case singing(volume: Int)
+  }
 
-let talking = Activity.talking(topic: "football")
-````
+  let talking = Activity.talking(topic: "football")
+  ````
   </p>
 </details>
 <details>
@@ -1031,17 +1031,16 @@ let talking = Activity.talking(topic: "football")
 
   For bonus points, you could add that Swift 5.4 and later allow multiple variadic parameters.
 
-
   ````
-func square(numbers: Int...) {
-  for number in numbers {
-      print("\(number) squared is \(number * number)")
+  func square(numbers: Int...) {
+    for number in numbers {
+        print("\(number) squared is \(number * number)")
+    }
   }
-}
 
-square(numbers: 1, 2, 3, 4, 5)
+  square(numbers: 1, 2, 3, 4, 5)
 
-print("Haters", "gonna", "hate")
+  print("Haters", "gonna", "hate")
   ````
   </p>
 </details>
@@ -1089,20 +1088,20 @@ print("Haters", "gonna", "hate")
 
   For example, you might start by saying that key paths let us refer to a property in a type rather than the exact value of that property in one particular instance. You could then follow up with examples such as using the `map()` method with a key path, to convert an array of users into an array of strings containing just their names, or perhaps using `filter()` to filter an array based on which items have a Boolean property set to true.
 
-````
-struct Starship {
-  var name: String
-  var maxWarp: Double
-}
+  ````
+  struct Starship {
+    var name: String
+    var maxWarp: Double
+  }
 
-let voyager = Starship(name: "Voyager", maxWarp: 9.975)
+  let voyager = Starship(name: "Voyager", maxWarp: 9.975)
 
-let nameKeyPath = \Starship.name
-let warpKeyPath = \Starship.maxWarp
+  let nameKeyPath = \Starship.name
+  let warpKeyPath = \Starship.maxWarp
 
-print(voyager[keyPath: nameKeyPath])
-print(voyager[keyPath: warpKeyPath])
-````
+  print(voyager[keyPath: nameKeyPath])
+  print(voyager[keyPath: warpKeyPath])
+  ````
   </p>
 </details>
 <details>
@@ -1122,11 +1121,11 @@ print(voyager[keyPath: warpKeyPath])
 
   For bonus points, talk about how SwiftUI uses `@ViewBuilder` to silently allow us to return different view types from a view body.
 
-````
-public var body: some View {
- Text("Opaque type 👆🏻")
-}
-````
+  ````
+  public var body: some View {
+    Text("Opaque type 👆🏻")
+  }
+  ````
   </p>
 </details>
 <details>
@@ -1138,21 +1137,21 @@ public var body: some View {
   Next, follow up with a specific example – I’d suggest that SwiftUI is the easiest one here, because when we have a `VStack` with a variety of views inside Swift silently groups them together into an internal `TupleView` type so that they can be stored as a single child of the `VStack` – it turns a sequence of views into a single view.
 
   ````
-@resultBuilder
-struct SimpleStringBuilder {
-    static func buildBlock(_ parts: String...) -> String {
-        parts.joined(separator: "\n")
-    }
-}
+  @resultBuilder
+  struct SimpleStringBuilder {
+      static func buildBlock(_ parts: String...) -> String {
+          parts.joined(separator: "\n")
+      }
+  }
 
-let joined = SimpleStringBuilder.buildBlock(
-    "Why settle for a Duke",
-    "when you can have",
-    "a Prince?"
-)
+  let joined = SimpleStringBuilder.buildBlock(
+      "Why settle for a Duke",
+      "when you can have",
+      "a Prince?"
+  )
 
-print(joined)
-````
+  print(joined)
+  ````
   </p>
 </details>
 <details>
@@ -1160,6 +1159,7 @@ print(joined)
   <p>
 
   ✅ Get straight to the point and say it allows us to compile one set of code for the simulator, and another set of code for physical devices. Make sure and follow up with a practical example, such as a game that uses Core Motion to handle tilting movement on a real device, whereas on the simulator you need to tap the screen to simulate motion.
+  
   ````
   func takePhoto() {
     #if targetEnvironment(simulator)
@@ -1178,7 +1178,7 @@ print(joined)
         present(picker, animated: true)
     #endif
   }
-````
+  ````
   </p>
 </details>
 <details>
@@ -1193,7 +1193,7 @@ print(joined)
         return self * self
     }
   }
-````
+  ````
   </p>
 </details>
 <details>
@@ -1203,6 +1203,23 @@ print(joined)
   ✅ There are a few ways you could tackle this, but I would recommend either talking about the `&&` operator or the `assert() `function – something you use regularly, and so feel comfortable talking about in detail.
 
   First, start with a simple definition: `@autoclosure` silently turns a function’s parameter into a closure so that it can be executed on demand rather than immediately. Now, pick a specific example such as `assert()` and explain why it’s used – the autoclosure behavior here ensures our assertion doesn’t happen in release mode, so it won’t have a performance impact when we ship apps to the App Store.
+
+  ````
+  func printTest1(_ result: () -> Void) {
+      print("Before")
+      result()
+      print("After")
+  }
+
+  func printTest2(_ result: @autoclosure () -> Void) {
+      print("Before")
+      result()
+      print("After")
+  }
+
+  printTest1({ print("Hello") })
+  printTest2(print("Hello"))
+  ````
   </p>
 </details>
 
