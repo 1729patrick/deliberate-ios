@@ -301,13 +301,33 @@ Immutability provides several benefits that make code more reliable, safe, and e
  Although the two have many conceptual similarities, CloudKit is specifically designed to work remotely. Another key difference is that CloudKit lets you store data without worrying about your structure ahead of time, whereas Core Data requires that you define your structure up front.
   </p>
 </details>
- <details>
+<details>
   <summary> 🤔 How does SpriteKit differ from SceneKit?</summary>
   <p>
 
   ✅ Obviously one is for 2D drawing and the other is 3D, but you might use this chance to talk about how they both sit on top of Metal, and how you can mix the two if you want.
 
   For additional material, consider talking about commonanlities – they can both be used with ARKit, UIKit, and SwiftUI, for example.
+  </p>
+</details>
+<details>
+  <summary> 🤔 How can you explain Metal?</summary>
+  <p>
+
+  ✅ Metal is a low-level graphics API provided by Apple that allows developers to access the power of the GPU in iOS, macOS, and tvOS devices. It provides fine-grained control over the GPU, enabling developers to create high-performance, visually rich applications with complex 2D and 3D graphics and visual effects.
+  </p>
+</details>
+<details>
+  <summary> 🤔 How can we use NSPersistentContainer?</summary>
+  <p>
+
+  ✅ NSPersistentContainer is a class in the Core Data framework introduced in iOS 10 and macOS 10.12. It is designed to simplify the creation and management of Core Data stack. It provides a high-level interface for setting up and configuring a Core Data stack, including the creation of a managed object model, a persistent store coordinator, and a managed object context.
+
+  With NSPersistentContainer, developers no longer need to manually set up the Core Data stack or write boilerplate code to handle Core Data initialization and setup. Instead, they can simply instantiate a NSPersistentContainer object, configure it with the appropriate parameters, and call the loadPersistentStores method to load the persistent stores.
+
+  NSPersistentContainer also provides several convenience methods for fetching and saving data, as well as support for multi-threading using private and main queue managed object contexts. This makes it easier to build scalable and responsive apps that use Core Data.
+
+  Overall, NSPersistentContainer is a convenient and powerful tool for managing Core Data stacks in iOS and macOS apps. Its high-level interface simplifies the setup and management of the Core Data stack, while its support for multi-threading and convenience methods make it easier to build scalable and responsive apps.
   </p>
 </details>
 <details>
