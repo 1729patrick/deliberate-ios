@@ -1,4 +1,4 @@
-# What does “`concurrency`” even mean?
+# What does `concurrency` even mean?
 Swift 5.5 introduces a massive collection of changes focused around a single topic: `concurrency`. These changes were so big they ended up having to be split into smaller proposals, but that had the side effect of making them inter-linked – you now had to read many proposals to get the same information, and many proposals built upon one or more other proposals.
 
 Back when I started reading through all the proposals in detail back in late January, I figured out an order that I think is the most logical for learners. That’s the order I’ve used since then, and that’s the order we’ll be using here – it tries to introduce individual topics one at a time, building on what you know rather than surprising you with concepts.
