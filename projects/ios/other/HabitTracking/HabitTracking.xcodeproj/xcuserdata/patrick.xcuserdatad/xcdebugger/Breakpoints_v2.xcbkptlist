@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "817B128A-6F52-4762-A0C5-13CE097A7100"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD18EE6D-33C9-4867-85B8-17C8431A0A88"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HabitTracking/ActivityDetailView.swift"
+            startingColumnNumber = "38"
+            endingColumnNumber = "38"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "didSave()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
