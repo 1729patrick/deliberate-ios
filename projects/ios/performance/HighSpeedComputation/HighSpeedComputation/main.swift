@@ -1,3 +1,10 @@
+//
+//  main.swift
+//  HighSpeedComputation
+//
+//  Created by Patrick Battisti Forsthofer on 23/02/23.
+//
+
 import Accelerate
 import Foundation
 
@@ -48,3 +55,4 @@ end = CFAbsoluteTimeGetCurrent()
 print("2. Took \(end - start) to find \(value2)")
 
 let rms = vDSP.rootMeanSquare(first)
+
