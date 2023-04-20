@@ -5,7 +5,6 @@
 **Identification:** Adapter is recognizable by a constructor which takes an instance of a different abstract/interface type. When adapter receives a call to any of its methods, it translates parameters to appropriate format and then directs the call to one or several methods of the wrapped object.
 
 **Complexity:** 1/3
-
 **Popularity:** 3/3
 
 ## Intent

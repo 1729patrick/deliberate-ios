@@ -4,7 +4,6 @@
 **Identification:** If you have an object tree, and each object of a tree is a part of the same class hierarchy, this is most likely a composite. If methods of these classes delegate the work to child objects of the tree and do it via the base class/interface of the hierarchy, this is definitely a composite.
 
 **Complexity:** 2/3
-
 **Popularity:** 2/3
 
 ## Intent
@@ -36,7 +35,9 @@ Solution suggested by the Composite pattern
 The Composite pattern lets you run a behavior recursively over all components of an object tree.
 The greatest benefit of this approach is that you don’t need to care about the concrete classes of objects that compose the tree. You don’t need to know whether an object is a simple product or a sophisticated box. You can treat them all the same via the common interface. When you call a method, the objects themselves pass the request down the tree.
 
-## Structure
+## Structure!
+
+[Structure](https://refactoring.guru/images/patterns/diagrams/composite/structure-en-2x.png)
 
 1. The **Component** interface describes operations that are common to both simple and complex elements of the tree.
 2. The **Leaf** is a basic element of a tree that doesn’t have sub-elements.

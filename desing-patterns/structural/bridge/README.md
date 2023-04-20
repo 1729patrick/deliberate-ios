@@ -5,7 +5,6 @@
 **Identification:** Bridge can be recognized by a clear distinction between some controlling entity and several different platforms that it relies on.
 
 **Complexity:** 3/3
-
 **Popularity:** 1/3
 
 ## Intent
