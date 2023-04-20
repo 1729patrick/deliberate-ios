@@ -1,4 +1,12 @@
 # Singleton
+
+**Usage examples:** A lot of developers consider the Singleton pattern an antipattern. That’s why its usage is on the decline in Swift code.
+
+**Identification:** Singleton can be recognized by a static creation method, which returns the same cached object.
+
+**Complexity:** 1/3
+**Popularity:** 2/3
+
 ## Intent
 
 Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.
@@ -54,13 +62,13 @@ Note that you can always adjust this limitation and allow creating any number of
 
 5. Go over the client code and replace all direct calls to the singleton’s constructor with calls to its static creation method.
 
-## ✅ Pros
+## Pros
 
 1. You can be sure that a class has only a single instance.
 2. You gain a global access point to that instance.
 The singleton object is initialized only when it’s requested for the first time.
 3. The singleton object is initialized only when it’s requested for the first time.
-## ❌ Cons
+## Cons
 1. Violates the Single Responsibility Principle. The pattern solves two problems at the time.
 2. The Singleton pattern can mask bad design, for instance, when the components of the program know too much about each other.
 3. The pattern requires special treatment in a multithreaded environment so that multiple threads won’t create a singleton object several times.
@@ -83,13 +91,6 @@ Singleton is a creational design pattern, which ensures that only one object of 
 Singleton has almost the same pros and cons as global variables. Although they’re super-handy, they break the modularity of your code.
 
 You can’t just use a class that depends on a Singleton in some other context, without carrying over the Singleton to the other context. Most of the time, this limitation comes up during the creation of unit tests. 
-
-**Usage examples:** A lot of developers consider the Singleton pattern an antipattern. That’s why its usage is on the decline in Swift code.
-
-**Identification:** Singleton can be recognized by a static creation method, which returns the same cached object.
-
-**Complexity:** 1/3
-**Popularity:** 2/3
 
 ````
 import XCTest
