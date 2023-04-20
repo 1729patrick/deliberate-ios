@@ -5,6 +5,8 @@ This repository contains a collection of resources for iOS developers who are lo
 # Summary
 [📚 Engineering Books](/books)
 
+[🔐 Design Patterns](/desing-patterns)
+
 [🧐 iOS Tech Interview Questions](/interview-questions/README.md)
 
 # 🎬 Getting Started 
